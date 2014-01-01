@@ -29,7 +29,8 @@ cd ..
   --includedir=/usr/include \
   --datadir=/usr/share \
   --bindir=/usr/sbin \
-  --libexecdir=/usr/lib64/squid \
+  --libdir=/usr/lib64 \
+  --libexecdir=/usr/libexec \
   --localstatedir=/var \
   --sysconfdir=/etc/squid
 
