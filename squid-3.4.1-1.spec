@@ -11,6 +11,7 @@ Group: Web Server
 URL: http://www.squid-cache.org/
 
 Source0: http://www.squid-cache.org/Versions/v3/3.4/squid-3.4.1.tar.gz
+Source1: http://www.squid-cache.org/Versions/langpack/squid-langpack-20131111.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -18,6 +19,9 @@ Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It r
 
 %prep
 %setup -q
+cd errors
+tar xzf %{SOURCE1}
+cd ..
 
 %build
 %{__rm} -rf %{buildroot}
