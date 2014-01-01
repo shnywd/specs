@@ -58,7 +58,7 @@ fi
 
 %files 
 %defattr(-,root,root)
-/usr/lib64/squid/*
+/usr/libexec/*
 /usr/sbin/*
 /usr/share/mib.txt
 /usr/share/errors/*
