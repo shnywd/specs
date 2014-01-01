@@ -29,7 +29,7 @@ cd ..
   --includedir=/usr/include \
   --datadir=/usr/share \
   --bindir=/usr/sbin \
-  --libexecdir=/usr/lib/squid \
+  --libexecdir=/usr/lib64/squid \
   --localstatedir=/var \
   --sysconfdir=/etc/squid
 
@@ -57,7 +57,7 @@ fi
 
 %files 
 %defattr(-,root,root)
-/usr/lib/squid/*
+/usr/lib64/squid/*
 /usr/sbin/*
 /usr/share/mib.txt
 /usr/share/errors/*
