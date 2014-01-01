@@ -1,5 +1,5 @@
 # $Id$
-# Authority: shinya wada
+# Authority: shnywd
 
 Summary: Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more.
 Name: squid
