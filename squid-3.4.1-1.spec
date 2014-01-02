@@ -46,14 +46,15 @@ make install DESTDIR=%{buildroot}
 
 %pre
 grep "^squid:" /etc/group
-if [ $? -eq 1 ] then ;
+if [ "$?" -eq 1 ] ; then
   groupadd squid
 fi
 
 grep "^squid:" /etc/passwd
-if [ $? -eq 1 ] then ;
+if [ "$?" -eq 1 ] ; then
   useradd squid -g squid
 fi
+
 %post
 
 %files 
