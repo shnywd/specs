@@ -29,10 +29,11 @@ cd ..
   --includedir=/usr/include \
   --datadir=/usr/share \
   --bindir=/usr/sbin \
-  --libdir=/usr/lib64 \
+  --libdir=/usr/lib \
   --libexecdir=/usr/libexec \
   --localstatedir=/var \
-  --sysconfdir=/etc/squid
+  --sysconfdir=/etc/squid 
+#  CC=gcc GCC=gcc CXXFLAGS='-arch x86_64'
 
 make
 
