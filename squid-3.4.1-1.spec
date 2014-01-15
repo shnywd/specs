@@ -32,7 +32,8 @@ cd ..
   --libdir=/usr/lib64 \
   --libexecdir=/usr/libexec \
   --localstatedir=/var \
-  --sysconfdir=/etc/squid
+  --sysconfdir=/etc/squid \
+  --disable-march-native
 
 make
 
