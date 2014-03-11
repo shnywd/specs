@@ -25,16 +25,29 @@ cd ..
 
 %build
 %{__rm} -rf %{buildroot}
+
+%ifarch sparcv9 sparc64 s390 s390x
+   export CXXFLAGS="$RPM_OPT_FLAGS -fPIE"
+   export CFLAGS="$RPM_OPT_FLAGS -fPIE"
+%else
+   export CXXFLAGS="$RPM_OPT_FLAGS -fpie"
+   export CFLAGS="$RPM_OPT_FLAGS -fpie"
+%endif
+export LDFLAGS="-pie"
+## LDFLAGS="-L/usr/lib64"
+## export LDFLAGS
+
+#  CXXFLAGS='-arch x86_64'
+
 ./configure --prefix=/usr \
   --includedir=/usr/include \
   --datadir=/usr/share \
   --bindir=/usr/sbin \
-  --libdir=/usr/lib \
+  --libdir=/usr/lib64 \
   --libexecdir=/usr/libexec \
   --localstatedir=/var \
   --sysconfdir=/etc/squid \
   --disable-march-native
-#  CC=gcc GCC=gcc CXXFLAGS='-arch x86_64'
 
 make
 
