@@ -20,7 +20,7 @@ ruby is object oriented script language
 %setup -q -n ruby-%{version}
 
 %build
-%{__rm} -rf %{buildroot}
+# %{__rm} -rf %{buildroot}
 ./configure
 make 
 
@@ -33,6 +33,25 @@ make install DESTDIR=%{buildroot}
 %{__rm} -rf %{buildroot}
 
 %files 
-/usr/local/ruby-%{version}
+/usr/local/bin/ruby
+/usr/local/bin/erb
+/usr/local/bin/irb
+/usr/local/bin/gem
+/usr/local/bin/rdoc
+/usr/local/bin/rake
+/usr/local/bin/testrb
+/usr/local/bin/ri
+/usr/local/lib/ruby/gems/2.1.0
+/usr/local/lib/ruby/2.1.0
+/usr/local/lib/libruby-static.a
+/usr/local/lib/pkgconfig/ruby-2.1.pc
+/usr/local/share/doc/ruby
+/usr/local/share/ri/2.1.0
+/usr/local/share/man/man1/ruby.1
+/usr/local/share/man/man1/rake.1
+/usr/local/share/man/man1/ri.1
+/usr/local/share/man/man1/irb.1
+/usr/local/share/man/man1/erb.1
+/usr/local/include/ruby-2.1.0
 
 %changelog
